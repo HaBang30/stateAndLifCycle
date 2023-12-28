@@ -1,0 +1,28 @@
+.container {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    margin-top: 20px;
+   
+ 
+}
+.decreBtn {
+    border: none;
+    width: 70px;
+    height: 20px;
+    background: red;
+    margin-top: 18px;
+    
+}
+.increBtn {
+    border: none;
+    width: 70px;
+    height: 20px;
+    background: green;
+    margin-top: 18px;
+}
+.number {
+    padding: 0px 20px 0px 20px;
+}

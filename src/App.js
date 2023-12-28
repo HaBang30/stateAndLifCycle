@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React, {Component} from "react";
+
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      number: 0,
+    }
+  }
+  increment = () => {
+    this.setState(prevState => ({
+      number: prevState.number + 1
+    }))
+  }
+  decrement = () => {
+    this.setState({
+      number: this.state.number - 1
+    })
+  }
+  render( ) {
+    return (
+      <div className="container">
+        <button onClick={this.increment}>Increment</button>
+        <h4>{this.state.number}</h4>
+        <button onClick={this.decrement}>Decrement</button>
+      </div>
+    )
+  }
 }
-
 export default App;
