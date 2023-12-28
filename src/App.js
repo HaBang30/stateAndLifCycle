@@ -23,7 +23,7 @@ class App extends Component {
     return (
       <div className="container">
         <button onClick={this.increment}>Increment</button>
-        <h4>{this.state.number}</h4>
+        <h3>{this.state.number}</h3>
         <button onClick={this.decrement}>Decrement</button>
       </div>
     )
